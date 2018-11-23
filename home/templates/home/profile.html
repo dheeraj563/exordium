@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Profile</title>
+</head>
+<body>
+{% block content %}
+
+    <img src="{{ profile.image.url }} " height="20" width="200">
+    <br>
+{{ profile.first_name }} {{ profile.last_name }}
+    <br>
+    {{ profile.branch }}
+
+{% endblock %}
+</body>
+</html>

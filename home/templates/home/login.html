@@ -1,0 +1,9 @@
+{% block body%}
+<center><h1>Register</h1></center>
+<form action="{% url 'home:loginform' %}" method="post">
+    {% csrf_token%}
+
+    <center>{{ form.as_p}}
+        <button type="submit">submit</button></center>
+</form>
+{% endblock %}

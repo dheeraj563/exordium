@@ -1,0 +1,46 @@
+{% block body%}
+<center><h1>Register</h1></center>
+<form action="{% url 'home:registration' %}" method="post">
+    {% csrf_token%}
+    {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+    <center>{{ form.as_p}}
+        <button type="submit">submit</button></center>
+</form>
+{% endblock %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<title>Registration</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<br><br><br><br><br><br><br><br><br><br><br>-->
+    <!--<form name="regf" action="registration/success" method="post" enctype="multipart/form-data">-->
+        <!--{% csrf_token %}-->
+        <!--<table align="center">-->
+            <!--<tr>-->
+                <!--<td>Roll no</td>-->
+                <!--<td><input type="number" name="user" size="20"></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>Email</td>-->
+            <!--<td><input type="text" name="email" size="20"></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>Password</td>-->
+            <!--<td><input type="password" name="pas" size="20"></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                    <!--<td colspan=2 align="center">-->
+                    <!--<input type="submit" name="b1" value="register"></td>-->
+            <!--</tr>-->
+        <!--</table>-->
+    <!--</form>-->
+<!--</body>-->
+<!--</html>-->
