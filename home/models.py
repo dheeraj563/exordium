@@ -3,6 +3,6 @@ from django.db import models
 
 class stulogin(models.Model):
     roll_no = models.IntegerField()
-    password  = models.CharField(max_length=16)
+    password  = models.CharField(max_length=14)
 
 
